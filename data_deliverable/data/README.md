@@ -13,7 +13,7 @@ Several assumptions about data types were made when constructing the database. V
 The join query is based on the assumption that the tesla_stock_data and russell_stock_data will have most days of data available. The russell_stock_data table was slightly less complete, having data for 25 less days than the tesla_stock_data table over the two year time period studied. For now, the days where only tesla data is available are omitted from the combined_stock_data table as comparisons between the two stocks cannot be made and therefore the data will not be helpful for our use case. 
 Note that the Russell3000.csv and Tesla.csv files are input data collected online from outside sources. These are included for reference, and are used to create the data.db file. More information about this process can be found in the tech report. 
 
-###result.csv (Stocktwits data)
+### result.csv (Stocktwits data)
 Stocktwits data only has one table which looks like this:   
    messages_id                       INTEGER  NOT NULL PRIMARY KEY   
    messages_body                     VARCHAR(431) NOT NULL  
