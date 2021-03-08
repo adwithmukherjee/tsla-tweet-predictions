@@ -32,5 +32,5 @@ tesla_tweets.db has one table called “tweets”:
 	comments:	INTEGER  
 	likes:	 	INTEGER  
 
-Where a combination of author and text serve as the primary key. This data is scraped from Twitter using Selenium and is equivalent to retrieving tweets by searching “$TSLA” on twitter for certain dates. We will use this tweet data to evaluate sentiment in the analysis part of the project. Comments and likes are recorded to measure the visibility of the post, and the author is recorded so that an author and their tweets can easily be removed from the database for further cleaning. 
+Where a combination of author and text serve as the primary key. This data is scraped from Twitter using Selenium with the scrape_tweets.py script, and is equivalent to retrieving tweets by searching “$TSLA” on twitter for certain dates. We will use this tweet data to evaluate sentiment in the analysis part of the project. Comments and likes are recorded to measure the visibility of the post, and the author is recorded so that an author and their tweets can easily be removed from the database for further cleaning. 
 
