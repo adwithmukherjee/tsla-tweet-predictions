@@ -1,0 +1,4 @@
+curl --data-binary @tweets.txt "http://www.sentiment140.com/api/bulkClassify?query=$TSLA" > api_output.txt
+
+
+

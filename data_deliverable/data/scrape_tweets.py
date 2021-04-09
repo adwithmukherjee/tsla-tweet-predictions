@@ -24,8 +24,6 @@ body = browser.find_element_by_tag_name('body')
 
 tweets = []
 
-#print(tweet_author.text)
-
 def repeat():
     tweet_divs = browser.find_elements_by_xpath("//div[@data-testid='tweet']") 
     for div in tweet_divs:
@@ -57,7 +55,6 @@ for i in range(30):
 
 print(len(tweets))
 df = pd.DataFrame(tweets, columns=["date", "author", "text", "num_comments", "num_likes"])
-print(df)
 
 conn = sqlite3.connect('tesla_tweets.db')
 c = conn.cursor()
@@ -70,8 +67,18 @@ conn.commit()
 
 
 for index, row in df.iterrows():
-    print(row["text"])
-    #c.execute('INSERT INTO companies VALUES("{}", "{}", "{}");'.format(row["Symbol"], row["Name"], row["HQ"]))
-    c.execute('INSERT INTO tweets VALUES("{}", "{}", "{}", {}, {});'.format(row["date"], row["author"], row["text"], row["num_comments"], row["num_likes"]))
-    
+    c.execute('INSERT OR IGNORE INTO tweets VALUES("{}", "{}", "{}", {}, {});'.format(row["date"], row["author"], row["text"], row["num_comments"], row["num_likes"]))
 conn.commit()
+
+#create .txt file for compatibility with sentiment analysis API
+file_pointer = open("tweets.txt", "w")
+for index, row in df.iterrows():
+    char_row = ''
+    for letter in row["text"]:
+        #remove newlines for compatibility with API, replace with space to preserve meaning
+        if (letter == '\n'):
+            char_row += ' '
+        else:
+            char_row += letter
+    file_pointer.write(char_row)
+    file_pointer.write('\n')
