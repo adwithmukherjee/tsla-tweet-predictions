@@ -1,0 +1,16 @@
+relative score date should be exactly 30 days after sentiment date 
+relative score is 0.18679451395032987, avg sentiment is 1.76, date for relative score is 01/31/2020, date for sentiment is 01/1/2020
+relative score is 0.184149809542262, avg sentiment is 2.0, date for relative score is 02/10/2020, date for sentiment is 01/11/2020
+relative score is 0.18977718633719498, avg sentiment is 2.1052631578947367, date for relative score is 02/11/2020, date for sentiment is 01/12/2020
+relative score is 0.23430115456575762, avg sentiment is 2.0384615384615383, date for relative score is 02/12/2020, date for sentiment is 01/13/2020
+relative score is 0.19713181874728547, avg sentiment is 2.0, date for relative score is 02/13/2020, date for sentiment is 01/14/2020
+relative score is 0.14241948098873958, avg sentiment is 2.0, date for relative score is 02/14/2020, date for sentiment is 01/15/2020
+relative score is 0.09634011611321902, avg sentiment is 2.0454545454545454, date for relative score is 02/18/2020, date for sentiment is 01/19/2020
+relative score is 0.14157121981730358, avg sentiment is 1.9130434782608696, date for relative score is 02/19/2020, date for sentiment is 01/20/2020
+relative score is 0.15285829881916035, avg sentiment is 1.8461538461538463, date for relative score is 02/20/2020, date for sentiment is 01/21/2020
+relative score is 0.12562875370172388, avg sentiment is 2.2181818181818183, date for relative score is 02/21/2020, date for sentiment is 01/22/2020
+relative score is 0.06809781729200992, avg sentiment is 2.130434782608696, date for relative score is 02/24/2020, date for sentiment is 01/25/2020
+relative score is 0.11158463604740654, avg sentiment is 1.951219512195122, date for relative score is 02/25/2020, date for sentiment is 01/26/2020
+relative score is 0.09209393141190791, avg sentiment is 1.8222222222222222, date for relative score is 02/26/2020, date for sentiment is 01/27/2020
+relative score is 0.23208959246933358, avg sentiment is 1.951219512195122, date for relative score is 02/27/2020, date for sentiment is 01/28/2020
+relative score is 0.19822134664251234, avg sentiment is 2.0416666666666665, date for relative score is 02/28/2020, date for sentiment is 01/29/2020

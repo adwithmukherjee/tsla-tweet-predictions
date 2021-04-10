@@ -1,22 +1,34 @@
 # Tech Report
-This is where you can type out your tech report.
+
+Our tech report is organized into the below three sections. In an attempt to create the most
+effective hypothesis testing project, we took three different approaches to the hypothesis testing. This allowed us to experiment with different natural language processing API's, 
+experiment with tuning parameters differently, and in some cases use different input data. \
+
+Across these three sections that outline different approaches to testing the hypothesis, the hypothesis remains largely the same. The hypothesis is as follows: \
+
+Null hypothesis- social media mentions of Tesla stock are not a good indicator of tesla stock price relative to the russell index fund. \
+Alternative hypothesis - social media mentions of Tesla stock can be used as an indicator of stock price relative to the russell index fund. \
+
+The first section outlines hypothesis testing relating to specifically Reddit mentions, whereas the following two sections focus on Twitter mentions. \
 
 ### Section 1 ###
-You can use sections to organize your work.
+My hypothesis is that sentiment scores are correlated with stock prices changes from day to day. Therefore, I gather Reddit posts for each day, give every post a score and take the average for that day. I then compare the change of sentiment between two days with the stock price movement. \
+We use regression and consider the r^2 value for the different datasets. We want to see if patterns in percentage change in stock are dependent or independent with respect to sentiment. I had to handle corrupted data especially for text. The datasets were also of different sizes and the days didn’t correspond to each other so we had to investigate unix timestamps and filter some days to make different datasets fit into each other in terms of size. \
+We rejected the hypothesis that the price movement is dependent on Reddit sentiment. We knew that this was a long shot since the proprietary money is a lot larger in quantities, and sentiment doesn’t reflect anything about the bigger investors and the earnings dates(or any other event that is fundamental for stock price). We think that the sentiment on Reddit is also not predictive, but rather chasing since we do regression with actual price changes coming first. \
+ No viz for Reddit yet \
+The main part where we acquire sentiment data is in our for loop that runs for 720 days, and makes a PushShift API call starting from January 1st 2019 to December 31st 2020. As we increment days one by one. After this call we plug the data into a dataframe, and analyze the body of the post. We use Sentiment Intensity Analyzer in order to get a sentiment score based on positive and negative keywords. A lot of Reddit users use terms that indicate strong sentiment that don’t exist in NLTK’s sentiment analysis library, therefore we started manually researching the website to see what these words mean and added them. Once we had daily sentiment change data, we got on Investing.com which gave us data about TSLA stock for our given dates. We were concerned about percentage change, therefore we parsed the strings in our stock price dataframe after reading the JSON. After turning these values into floats as well, we imported scipy to do Regression on the two datasets, and obtain the r_squared value. \
 
 ### Section 2 ###
-Or even sub-sections!
+I used the chi squared statistical test because this is a great test for determining the statistical relationship between two variables, namely the average sentiment of tesla mentions on twitter and tesla stock price performance relative to the russell index fund. The output of this test that I used to determine the validity of the hypothesis is the p-value. If the p-value is less than 0.05 the null hypothesis is rejected and the alternative hypothesis is accepted. However, the test did not provide this level of success since the p-value was about 0.99. Some challenges that were faced in evaluating the model were finding dependence of the variables. I did have to do a lot of data restructuring because I needed to assign a sentiment score to each tweet, average the sentiment scores for each day, normalize the closing stock prices of tesla and the russell index fund, compute the relative stock price, and then line that data up with the average sentiment score 30 days prior. \
 
-#### Subsection 2.1 ####
-Hi
+The chi squared statistical test led to a p-value of almost one, meaning that the null hypothesis cannot be rejected. Usually the null hypothesis is rejected when the p value is less than 0.05. My interpretation of this result is that I cannot state, from the results of the chi squared test, that the sentiment of tweets that mention twitter correlate to the closing stock price of twitter relative to the closing stock price of russell 30 days later. I do not accept the alternative hypothesis because the null hypothesis can not be rejected. Because of these results, I am not happy with my accuracy.  I think the results are probably accurate, however, because of the smaller pool of data that the test was conducted on and the shortcomings of natural language processing in the API I used. Additionally, it may be useful to use a larger time bracket, for example structure the cross table so that each column represents a week instead of a day. It is more intuitive that sentiment over the course of a week would lead to a downstead change in stock performance, rather than seeing a change based on the sentiment of a specific day. This is a parameter that could be fine tuned in later iterations of the project. \
 
-#### Subsection 2.1 ####
-Hello
+No visualization yet for this portion of the project. \
 
-You can also attach photos from your repo
+The process for how I perform the analysis is outlined below. First, I connect to the database that stores the tweets and select the text for each tweet using an sql statement. I also select the dates for each of these tweets. I then compute an average sentiment score for each day, by averaging the sentiment scores for all the tweets published on that day. The sentiment scores are found by interacting with an NLP API found online using the curl script in tweets_processing_files/curl_script.txt. The API assigns a 0 to negative sentiment tweets, a 2 to neutral tweets, and a 4 to positive tweets. The results of this can be seen in the api_output.txt file. Then, in order to make the russell close price data able to be meaningfully compared to the tesla close price data, I normalize the values on a scale of 0-1 that represents how the close price relates to the minimum and maximum close prices for each fund in the database. I then create a cross table of the average sentiment score of tweets, and then the relative stock price 30 days later for each day. The relative stock price is computed by subtracting the tesla normalized close price from the russell normalized close price. I then perform the chi squared test on this cross table using the scipy stats library and print out the results. \
 
-![Happy Panda](../visualizations/figure_1.jpg)
+I think there are definitely confounding trends or variables present in the data that I perform the statistical test on, as there usually is when dealing with social media data. The same websites, news articles, and news television that affects investor behavior on the stock market will affect twitter users’ behavior when they publish tweets on the internet. It is hard to think of a way to control for these confounding variables because the affect of other media on twitter is so pervasive. \
 
-For more ways to organize your report, check this markdown cheatsheet: https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
+The future direction to go in for these results is seeing if performing the test on more data will lead to a lower p value. It also could be useful to bracket the data into time periods, so we could see if the average sentiment of tesla twitter mentions over the course of a week rather than a day correlates to the relative stock price. \
 
-We ***highly encourage you to use markdown syntax to organize and clean your reports*** since it will make it a lot more comprehenisble for the TA grading your project.
+### Section 3 ###

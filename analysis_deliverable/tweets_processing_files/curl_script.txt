@@ -1,4 +1,4 @@
 curl --data-binary @tweets.txt "http://www.sentiment140.com/api/bulkClassify?query=$TSLA" > api_output.txt
 
-
+this is the script used to interact with the NLP API and assign a sentiment score to each tweet.
 
