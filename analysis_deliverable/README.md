@@ -8,6 +8,5 @@ This is the analysis deliverable's master directory! Please use the following sh
 _You can edit this README to refer to your own visualizations once you upload them_
 
 [Visualizations](visualizations)
-- [Tweet Sentiment vs. Stock Price for TSLA](visualizations/tesla_tweets_viz1.png
-- )
+- [Tweet Sentiment vs. Stock Price for TSLA](visualizations/tesla_tweets_viz1.png)
 
