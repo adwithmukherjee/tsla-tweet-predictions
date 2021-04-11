@@ -37,7 +37,9 @@ I think there are definitely confounding trends or variables present in the data
 
 The future direction to go in for these results is seeing if performing the test on more data will lead to a lower p value. It also could be useful to bracket the data into time periods, so we could see if the average sentiment of tesla twitter mentions over the course of a week rather than a day correlates to the relative stock price.  
 
-## Section 3 ##
+## Section 3 ## - Using VADER analysis to perform multiple regression on Tweet data
+
+[Python Scripts here](../tweet_vader_regression)
 
 ### Hypothesis ###
 
