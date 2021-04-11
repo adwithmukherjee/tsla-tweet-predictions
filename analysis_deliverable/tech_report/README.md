@@ -48,7 +48,8 @@ The null hypothesis in this task was that the sentiment of Tweets related to TSL
 ### Process ###
 I use multiple regression because it allows me to introduce a number of salient data points in evaluating the relationship between TSLA tweets and stock price. I used the VADER sentiment analysis algorithm to determine the polarity of each TSLA-related tweet I had scraped, assigning each tweet a positive, negative, and neutral score. Each tweet also had a certain number of likes and comments. I averaged each VADER score for a given day of tweets and summed the number of likes and comments on all tweets in a given day to create [sentiments.csv](../tweet_vader_regression/sentiments.csv), a table of the aggregated positive, negative, and neutral sentiment values as well as likes and comments for a sample of tweets for each day in 2020. 
 
-I then ran a multiple regression test using the values in sentiments.csv, where the dependent variable was the percent change in stock price on a given day. I measured success using the resultant p-value. I do not think r^2 is a good metric by which to judge the model because tweets are human-generated and sentiment data is inherently noisy, almost guaranteeing a low p-value. 
+I then ran a multiple regression test using the values in sentiments.csv, where the dependent variable was the percent change in stock price on a given day. I measured success using the resultant p-value. I do not think r^2 is a good metric by which to judge the model because tweets are human-generated and sentiment data is inherently noisy, almost guaranteeing a low R^2-value. 
+
 I had to significantly restructure my data, as described above, reformatting tesla_tweets.db, which simply held raw tweets, into usable sentiment data for given days. This involved analyzing tweets individually and then aggregating them by date so they could be compared to the day’s stock price, as described above. 
 
 ### Results ###
