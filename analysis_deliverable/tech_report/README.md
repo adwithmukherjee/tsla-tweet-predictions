@@ -37,21 +37,21 @@ I think there are definitely confounding trends or variables present in the data
 
 The future direction to go in for these results is seeing if performing the test on more data will lead to a lower p value. It also could be useful to bracket the data into time periods, so we could see if the average sentiment of tesla twitter mentions over the course of a week rather than a day correlates to the relative stock price.  
 
-### Section 3 ###
+## Section 3 ##
 
-# Hypothesis #
+### Hypothesis ###
 
 The null hypothesis in this task was that the sentiment of Tweets related to TSLA stock is not a good indicator of the current price of TSLA stock. The alternative hypothesis is that the sentiment of Tweets related to TSLA stock is a good indicator of the current price of TSLA stock. I use a multiple regression model trained on one year of Tweet data and publicly available stock data to evaluate the statistical significance of the relationship between the two. A p-value below 0.05 would demonstrate a significant relationship. 
 
-# Process #
+### Process ###
 I use multiple regression because it allows me to introduce a number of salient data points in evaluating the relationship between TSLA tweets and stock price. I used the VADER sentiment analysis algorithm to determine the polarity of each TSLA-related tweet I had scraped, assigning each tweet a positive, negative, and neutral score. Each tweet also had a certain number of likes and comments. I averaged each VADER score for a given day of tweets and summed the number of likes and comments on all tweets in a given day to create [sentiments.csv](../tweet_vader_regression/sentiments.csv), a table of the aggregated positive, negative, and neutral sentiment values as well as likes and comments for a sample of tweets for each day in 2020. 
 
 I then ran a multiple regression test using the values in sentiments.csv, where the dependent variable was the percent change in stock price on a given day. I measured success using the resultant p-value. I do not think r^2 is a good metric by which to judge the model because tweets are human-generated and sentiment data is inherently noisy, almost guaranteeing a low p-value. 
 I had to significantly restructure my data, as described above, reformatting tesla_tweets.db, which simply held raw tweets, into usable sentiment data for given days. This involved analyzing tweets individually and then aggregating them by date so they could be compared to the day’s stock price, as described above. 
 
-# Results #
+### Results ###
 The multiple regression test resulted in a p-value of 0.0627. This means that, given the sample of data, there is a 6% chance the null hypothesis is true. While evidence that the proposed relationship is not a coincidence, it is not enough to reject the null hypothesis. This would require a p-value less than 0.05. 
 I am fairly confident in our results, given that we used a year of Twitter data and robust statistical methods. I think there is evidence of a relationship, and that with less noisy and more accurate data it can be concretely demonstrated. 
 
-# Visualization #
+### Visualization ###
 I picked [this graph](../visualizations/tesla_tweets_viz1.png)because it represents the relationship between the independent variable of highest coefficient in my multiple regression model with the dependent variable. This independent variable is the aggregated negative sentiment value of tweets on a given day, and there is a slight correlation between it and the change in stock price for that day, as demonstrated in the visualization. There were several challenges in visualizing the results, chief among which was visualizing the relationship of the dependent variable with multiple independent variables. This could have been done with a 3-dimensional scatter plot, but was messy and unclear. Ultimately, I opted to clearly show the relationship with the most significant independent variable. 
