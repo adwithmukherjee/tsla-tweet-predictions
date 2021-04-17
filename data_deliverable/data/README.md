@@ -24,7 +24,7 @@ Stocktwits data only has one table which looks like this:
 
 We use the message_id as key, and since the Stocktwits API will only give 30 stocks in one call we don’t want duplicate messages. We are making the assumption that every commenter will have a sentiment such as “Bullish” or “Bearish.” However, there are tweets that don’t explicitly mention sentiment which creates some gaps. Also, we’re noticing on the website that a lot of bots are centered around creating an illusion of sentiment, hence we also store user_id of a post so we can later on see how to add bias depending on how many unique messages we accumulate. 
 
-### tesla_tweets.db (Twitter data) Full data base here \{link}[https://drive.google.com/file/d/14-rKnyoxib4bkZBiL6dgLQLrY4dzeQnY/view?usp=sharing]
+### tesla_tweets.db (Twitter data) Full data base here [https://drive.google.com/file/d/14-rKnyoxib4bkZBiL6dgLQLrY4dzeQnY/view?usp=sharing]
 tesla_tweets.db has one table called “tweets”:   
 	date:  		DATE  
 	author: 	VARCHAR(100)  
