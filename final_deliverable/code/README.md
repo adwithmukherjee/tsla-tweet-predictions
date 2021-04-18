@@ -1,20 +1,7 @@
 # Code README
 This is where you can document your design decisions, known bugs, and instructions to run your code.
 
-_Please remove the example code files `file_1.py`, `file_2.py`, and `file_3.py`, and replace them with your own code._
+### Twitter Linear Regression ###
 
-### Design Decisions ###
-You can use sections to organize your work.
+Please see analysis_deliverable section 2 for a description of this portion of the project and the link to the code (the files would not push to github because of size issues, so they are hosted on google drive.)
 
-### Instructions ###
-Or even sub-sections!
-
-#### Subsection 2.1 ####
-Hi
-
-#### Subsection 2.1 ####
-Hello
-
-For more ways to organize your report, check this markdown cheatsheet: https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
-
-We ***highly encourage you to use markdown syntax to organize and clean your reports*** since it will make it a lot more comprehenisble for the TA grading your project.

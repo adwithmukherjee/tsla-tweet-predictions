@@ -19,7 +19,7 @@ This is the final project's master repo! Please use the following shortcut links
 - #### Visualizations ####
  
 [Visualizations](visualizations)
-- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](analysis_deliverable/visualizations/tesla_tweets_viz1.png)
 - [Tweet Sentiment vs. Relative Stock Price, linear regression data](analysis_deliverable/visualizations/twitter_linear_regression.png)
 
 
@@ -34,6 +34,6 @@ This is the final project's master repo! Please use the following shortcut links
 - #### Visualizations ####
 
 [Visualizations](visualizations)
-- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
-- [Tweet Sentiment vs. Relative Stock Price, linear regression data](../visualizations/twitter_linear_regression.png)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](analysis_deliverable/visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Relative Stock Price, linear regression data](analysis_deliverable/visualizations/twitter_linear_regression.png)
 

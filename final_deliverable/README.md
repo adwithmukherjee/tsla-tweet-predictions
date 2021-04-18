@@ -8,9 +8,6 @@ This is the final deliverable's master directory! Please use the following short
 [Code](code/)
 
 ### Visualizations ###
-_You can edit this README to refer to your own visualizations once you upload them_
-
 [Visualizations](visualizations)
-- [Happy Panda](visualizations/figure_1.jpg)
-- [Worried Panda](visualizations/figure_2.jpg)
-- [Surprised Panda](visualizations/figure_3.jpg)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Relative Stock Price, linear regression data](visualizations/twitter_linear_regression.png)
