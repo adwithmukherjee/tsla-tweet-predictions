@@ -5,8 +5,8 @@ This is the analysis deliverable's master directory! Please use the following sh
 [Tech Report](tech_report/)
 
 ### Visualizations ###
-_You can edit this README to refer to your own visualizations once you upload them_
 
 [Visualizations](visualizations)
-- [Tweet Sentiment vs. Stock Price for TSLA](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Relative Stock Price, linear regression data](../visualizations/twitter_linear_regression.png)
 

@@ -17,11 +17,10 @@ This is the final project's master repo! Please use the following shortcut links
   [Tech Report](analysis_deliverable/tech_report/)
 
 - #### Visualizations ####
-  _You can edit this README to refer to your own visualizations once you upload them_
-
-  [Visualizations](analysis_deliverable/visualizations)
-  - [Happy Panda](analysis_deliverable/visualizations/figure_1.jpg)
-  - [Worried Panda](analysis_deliverable/visualizations/figure_2.jpg)
+ 
+[Visualizations](visualizations)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Relative Stock Price, linear regression data](../visualizations/twitter_linear_regression.png)
 
 
 ## Final Deliverable ##
@@ -33,10 +32,8 @@ This is the final project's master repo! Please use the following shortcut links
   [Code](final_deliverable/code/)
 
 - #### Visualizations ####
-  _You can edit this README to refer to your own visualizations once you upload them_
 
-  [Visualizations](final_deliverable/visualizations)
-  - [Happy Panda](final_deliverable/visualizations/figure_1.jpg)
-  - [Worried Panda](final_deliverable/visualizations/figure_2.jpg)
-  - [Surprised Panda](final_deliverable/visualizations/figure_3.jpg)
+[Visualizations](visualizations)
+- [Tweet Sentiment vs. Stock Price for TSLA, multiple regression data](visualizations/tesla_tweets_viz1.png)
+- [Tweet Sentiment vs. Relative Stock Price, linear regression data](../visualizations/twitter_linear_regression.png)
 
