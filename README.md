@@ -9,7 +9,8 @@ This is the final project's master repo! Please use the following shortcut links
 - #### Reports ####
   - [Tech Report](data_deliverable/reports/tech_report/)
   - [Socio-historical Context and Impact Report](data_deliverable/reports/social_impact_report)
-
+- #### Video ####
+  - https://drive.google.com/file/d/1_FE5rZJdqVkjU0LuemLughCU_mErhGbe/view?usp=sharing 
 
 ## Analysis Deliverable ##
 
